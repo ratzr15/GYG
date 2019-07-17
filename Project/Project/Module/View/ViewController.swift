@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------------------------------------------------------------------
-//  File Name        :   CategoriesViewController
-//  Description      :   Controller to manange the categories from data store
+//  File Name        :   ViewController
+//  Description      :   Controller to manange the datas from data store
 //                   :   1. UI    - link to UI
 //                       2. Architecture    - TDD + Clean Swift (http://clean-swift.com)
 //  Author            :  Rathish Kannan
@@ -70,7 +70,7 @@ class ViewController: UIViewController, DisplayLogic {
     override func viewDidLoad(){
         super.viewDidLoad()
         clearNavigation()
-        fetchData(request: List.Fetch.Request.init(p2Lat: "53.394655", p1Lon: "65.757589", p1Lat: "59.694865", p2Lon: "10.099891"))
+        fetchData(request: List.Fetch.Request.init(count: "10", page: "1", rating: "0..5", sortBy: "date_of_review", direction: "DESC"))
     }
     
     private func clearNavigation(){
