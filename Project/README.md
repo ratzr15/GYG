@@ -1,4 +1,4 @@
-# PROJECT - Empty project to kickstart work
+# PROJECT - GYG
 
 
 ## Author
