@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------------------------------------------------------
-//  File Name        :   CategoriesModels
+//  File Name        :   Models
 //  Description      :   VM's resolved as Equatables
 //                       2. Architecture    - TDD + Clean Swift (http://clean-swift.com)
 //  Author            :  Rathish Kannan
@@ -48,16 +48,17 @@ struct NoResultsItem: ListViewModelItem {
 enum List{
     // MARK: Use cases    
     enum Fetch{
-                
+        
         struct Request{
-            var p2Lat:String
-            var p1Lon:String
-            var p1Lat:String
-            var p2Lon:String
+            var count:String
+            var page:String
+            var rating:String
+            var sortBy:String
+            var direction:String
         }
         
         struct Response{
-            var datas: [Categories]
+            var datas: [Datum]
         }
         
         struct ViewModel {
