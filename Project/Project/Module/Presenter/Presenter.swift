@@ -24,8 +24,8 @@ class Presenter: DataPresentationLogic{
         var displayedData: [List.Fetch.ViewModel.ListItem] = []
         
         if response.datas.count > 0 {
-            for _ in response.datas {
-                let listVM = List.Fetch.ViewModel.ListItem.init(latitude: 1.00, longitude: 2.00, title:"category.fleetType.value" )
+            for data in response.datas {
+                let listVM = List.Fetch.ViewModel.ListItem.init(rating: data.rating, message: data.message, title: data.title, author: data.author, photo: data.reviewerProfilePhoto)
                 displayedData.append(listVM)
             }
         }
@@ -39,3 +39,5 @@ class Presenter: DataPresentationLogic{
     
     
 }
+
+
