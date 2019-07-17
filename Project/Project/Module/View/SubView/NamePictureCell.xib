@@ -1,60 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="CircularPro-Book.otf">
-            <string>CircularPro-Book</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="315" id="Vgn-LN-SG8" customClass="NamePictureCell" customModule="NewsList" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="444" height="315"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="237" id="Vgn-LN-SG8" customClass="NamePictureCell" customModule="Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vgn-LN-SG8" id="urk-Ti-LfO">
-                <rect key="frame" x="0.0" y="0.0" width="444" height="314.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="444" height="236.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-Gx-qZh">
-                        <rect key="frame" x="0.0" y="0.0" width="444" height="168"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" hint="" identifier="C1A81C57-B853-4EF1-B656-C98CEC241A5A-asset" label=""/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wj2-yx-0EH">
+                        <rect key="frame" x="20" y="11" width="404" height="108.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incredibly India!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31Z-NB-nz6">
+                                <rect key="frame" x="0.0" y="0.0" width="404" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0F-XT-jUh">
+                                <rect key="frame" x="0.0" y="30.5" width="404" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incredibly India!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-Dk-ZJr">
+                                <rect key="frame" x="0.0" y="88.5" width="404" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="168" id="gwj-Z0-PcA"/>
+                            <constraint firstItem="d0F-XT-jUh" firstAttribute="top" secondItem="31Z-NB-nz6" secondAttribute="bottom" constant="8" symbolic="YES" id="yzb-ku-fnD"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pba-av-xAC">
+                        <rect key="frame" x="117" y="148" width="307" height="48.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVa-df-nLG">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suN-4j-uJ3">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="48.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-b9-ANa">
+                        <rect key="frame" x="20" y="148" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="M4N-iB-hEH"/>
+                            <constraint firstAttribute="width" constant="75" id="oSS-5X-ZwE"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" contentMode="center" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-u8-eU0" userLabel="The Sun &amp; Sand Sport">
-                        <rect key="frame" x="36" y="200" width="372" height="72"/>
-                        <accessibility key="accessibilityConfiguration" hint="" identifier="26544E46-83CC-45BA-8764-C41A4A7B88ED" label=""/>
-                        <fontDescription key="fontDescription" name="CircularPro-Book" family="CircularPro-Book" pointSize="18"/>
-                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="deviceRGB"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="Nlx-Gx-qZh" firstAttribute="leading" secondItem="urk-Ti-LfO" secondAttribute="leading" id="5de-w5-tjS"/>
-                    <constraint firstAttribute="trailing" secondItem="Nlx-Gx-qZh" secondAttribute="trailing" id="8jR-po-CJ8"/>
-                    <constraint firstItem="aGz-u8-eU0" firstAttribute="top" secondItem="Nlx-Gx-qZh" secondAttribute="bottom" constant="32" id="SUG-TS-PFy"/>
-                    <constraint firstItem="Nlx-Gx-qZh" firstAttribute="top" secondItem="urk-Ti-LfO" secondAttribute="top" id="VrD-rV-VlH"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="aGz-u8-eU0" secondAttribute="trailing" constant="16" id="YXP-xb-kOp"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="aGz-u8-eU0" secondAttribute="bottom" constant="32" id="aID-Kv-7ce"/>
-                    <constraint firstItem="aGz-u8-eU0" firstAttribute="leading" secondItem="urk-Ti-LfO" secondAttribute="leadingMargin" constant="16" id="yXB-ef-fPP"/>
+                    <constraint firstItem="wj2-yx-0EH" firstAttribute="top" secondItem="urk-Ti-LfO" secondAttribute="top" constant="11" id="8jh-az-ig0"/>
+                    <constraint firstAttribute="bottom" secondItem="c5p-b9-ANa" secondAttribute="bottom" constant="13.5" id="F9x-5S-yEe"/>
+                    <constraint firstItem="c5p-b9-ANa" firstAttribute="leading" secondItem="wj2-yx-0EH" secondAttribute="leading" id="K5U-dm-ZBY"/>
+                    <constraint firstItem="pba-av-xAC" firstAttribute="top" secondItem="c5p-b9-ANa" secondAttribute="top" id="MRn-yn-MV1"/>
+                    <constraint firstAttribute="trailing" secondItem="pba-av-xAC" secondAttribute="trailing" constant="20" id="Nik-hx-lDL"/>
+                    <constraint firstAttribute="trailing" secondItem="wj2-yx-0EH" secondAttribute="trailing" constant="20" id="Rel-hJ-tZe"/>
+                    <constraint firstAttribute="bottom" secondItem="pba-av-xAC" secondAttribute="bottom" constant="40" id="iKI-Vm-FDo"/>
+                    <constraint firstItem="pba-av-xAC" firstAttribute="leading" secondItem="c5p-b9-ANa" secondAttribute="trailing" constant="22" id="jhQ-LW-wih"/>
+                    <constraint firstItem="c5p-b9-ANa" firstAttribute="top" secondItem="wj2-yx-0EH" secondAttribute="bottom" constant="28.5" id="vLE-Ir-DKn"/>
+                    <constraint firstItem="wj2-yx-0EH" firstAttribute="leading" secondItem="urk-Ti-LfO" secondAttribute="leading" constant="20" id="vYS-Cy-3IZ"/>
                 </constraints>
                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             </tableViewCellContentView>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <connections>
-                <outlet property="overView" destination="aGz-u8-eU0" id="xlB-Lu-hIM"/>
-                <outlet property="pictureImageView" destination="Nlx-Gx-qZh" id="4kP-QQ-rb5"/>
+                <outlet property="avatarImgView" destination="c5p-b9-ANa" id="nJS-Wc-HAT"/>
+                <outlet property="messageLabel" destination="qTi-Dk-ZJr" id="fQq-Vc-XbH"/>
+                <outlet property="nameLabel" destination="suN-4j-uJ3" id="kDe-Bu-jhY"/>
+                <outlet property="prefixLabel" destination="rVa-df-nLG" id="sZf-HQ-niB"/>
+                <outlet property="ratingView" destination="d0F-XT-jUh" id="6qp-vq-Muf"/>
+                <outlet property="titleLabel" destination="31Z-NB-nz6" id="0yB-LI-3ST"/>
             </connections>
-            <point key="canvasLocation" x="-57.600000000000001" y="-279.31034482758622"/>
+            <point key="canvasLocation" x="-57.600000000000001" y="-314.39280359820094"/>
         </tableViewCell>
     </objects>
 </document>

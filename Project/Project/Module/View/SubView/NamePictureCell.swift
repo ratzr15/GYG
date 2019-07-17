@@ -10,16 +10,24 @@ import UIKit
 
 class NamePictureCell: UITableViewCell {
 
-    @IBOutlet weak var overView: UILabel?
-    @IBOutlet weak var pictureImageView: UIImageView?
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var messageLabel: UILabel!
     
-    var item: DetailsItem? {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var prefixLabel: UILabel!
+    @IBOutlet weak var avatarImgView: UIImageView!
+    
+    var item: ListViewModelItem? {
         didSet {
-            guard let item = item  else {
+            guard let item = item as? List.Fetch.ViewModel.ListItem else {
                 return
-            }            
-            pictureImageView?.image = UIImage(url: URL(string: item.pictureUrl))
-            overView?.text = item.overView
+            }
+            prefixLabel.text = "reviewed by"
+            nameLabel.text   = item.author
+            let title =   item.title != "" ? "\("\"")\(item.title ?? "")\("\"")" : ""
+            titleLabel?.text = title
+            messageLabel?.text = item.message
         }
     }
     
@@ -37,6 +45,7 @@ class NamePictureCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        pictureImageView?.image = nil
+        titleLabel.text = ""
+        messageLabel.text = ""
     }    
 }
