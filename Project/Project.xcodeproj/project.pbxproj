@@ -20,6 +20,7 @@
 		AE145A9022DF55A100027458 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE145A8D22DF55A100027458 /* Data.swift */; };
 		AE3453D022DF6F78002DFA03 /* NamePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3453CE22DF6F77002DFA03 /* NamePictureCell.xib */; };
 		AE3453D122DF6F78002DFA03 /* NamePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3453CF22DF6F78002DFA03 /* NamePictureCell.swift */; };
+		AE3453D322DFAED7002DFA03 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3453D222DFAED7002DFA03 /* UIImageView+Kingfisher.swift */; };
 		AE37F6F62199A708001787F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F6F52199A708001787F6 /* AppDelegate.swift */; };
 		AE37F6FB2199A708001787F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6F92199A708001787F6 /* Main.storyboard */; };
 		AE37F6FD2199A709001787F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6FC2199A709001787F6 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		AE145A8D22DF55A100027458 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		AE3453CE22DF6F77002DFA03 /* NamePictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NamePictureCell.xib; sourceTree = "<group>"; };
 		AE3453CF22DF6F78002DFA03 /* NamePictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamePictureCell.swift; sourceTree = "<group>"; };
+		AE3453D222DFAED7002DFA03 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		AE37F6F22199A708001787F6 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE37F6F52199A708001787F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE37F6FA2199A708001787F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		AE3453CB22DF6DB3002DFA03 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AE3453D222DFAED7002DFA03 /* UIImageView+Kingfisher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -447,12 +450,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -510,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3453D322DFAED7002DFA03 /* UIImageView+Kingfisher.swift in Sources */,
 				AE0E631422DB1E6A00C075D0 /* Interactor.swift in Sources */,
 				AE0E632722DB200D00C075D0 /* Endpoint.swift in Sources */,
 				AE0E631122DB1E4C00C075D0 /* ViewController.swift in Sources */,

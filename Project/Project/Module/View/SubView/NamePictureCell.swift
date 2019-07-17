@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class NamePictureCell: UITableViewCell {
 
@@ -28,6 +30,8 @@ class NamePictureCell: UITableViewCell {
             let title =   item.title != "" ? "\("\"")\(item.title ?? "")\("\"")" : ""
             titleLabel?.text = title
             messageLabel?.text = item.message
+            avatarImgView.load(URL.init(string: item.photo ?? ""), placeholder: "placeholder", errorPlaceholder: "placeholder")
+            
         }
     }
     
