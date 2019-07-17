@@ -16,19 +16,19 @@ protocol FetchDataBusinessLogic{
 }
 
 protocol DataStore{
-    var datas: [Categories]? { get }
+    var datas: [Datum]? { get }
 }
 
 class Interactor: FetchDataBusinessLogic, DataStore{
-    var datas: [Categories]?
+    var datas: [Datum]?
     var presenter: DataPresentationLogic?
     var worker: Worker?
     
     func fetchData(request: List.Fetch.Request) {
         worker = Worker()
-        worker?.fetchData(request: request){ (categories) -> Void in
-            self.datas = categories
-            let response = List.Fetch.Response(datas: categories)
+        worker?.fetchData(request: request){ (datas) -> Void in
+            self.datas = datas
+            let response = List.Fetch.Response(datas: datas)
             self.presenter?.presentData(response: response)
         }
     }
