@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------------------------------------------------------
-//  File Name        :   CategoriesPresenter
+//  File Name        :   Presenter
 //  Description      :   Presenter to manange the categories from data store
 //                   :   1. UI    - https://github.com/ratzr15/mobile-test/blob/master/resources_android.png
 //                       2. Architecture    - TDD + Clean Swift (http://clean-swift.com)

@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------------------------------------------------------
-//  File Name        :   CategoriesRouter
+//  File Name        :   Router
 //  Description      :   Navigation logics from the categories to other pages
 //                       2. Architecture    - TDD + Clean Swift (http://clean-swift.com)
 //  Author            :  Rathish Kannan
