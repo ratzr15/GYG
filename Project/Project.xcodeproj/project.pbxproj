@@ -14,10 +14,10 @@
 		AE0E631722DB1E7800C075D0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E631622DB1E7800C075D0 /* Presenter.swift */; };
 		AE0E631A22DB1E8800C075D0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E631922DB1E8800C075D0 /* Models.swift */; };
 		AE0E632022DB1EAA00C075D0 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E631F22DB1EAA00C075D0 /* Worker.swift */; };
-		AE0E632422DB1F9800C075D0 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632322DB1F9800C075D0 /* Categories.swift */; };
 		AE0E632722DB200D00C075D0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632522DB200D00C075D0 /* Endpoint.swift */; };
 		AE0E632822DB200D00C075D0 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632622DB200D00C075D0 /* AlamofireClient.swift */; };
 		AE0E632A22DB247B00C075D0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632922DB247B00C075D0 /* Router.swift */; };
+		AE145A9022DF55A100027458 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE145A8D22DF55A100027458 /* Data.swift */; };
 		AE37F6F62199A708001787F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F6F52199A708001787F6 /* AppDelegate.swift */; };
 		AE37F6FB2199A708001787F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6F92199A708001787F6 /* Main.storyboard */; };
 		AE37F6FD2199A709001787F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6FC2199A709001787F6 /* Assets.xcassets */; };
@@ -57,10 +57,10 @@
 		AE0E631622DB1E7800C075D0 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		AE0E631922DB1E8800C075D0 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		AE0E631F22DB1EAA00C075D0 /* Worker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
-		AE0E632322DB1F9800C075D0 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		AE0E632522DB200D00C075D0 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AE0E632622DB200D00C075D0 /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		AE0E632922DB247B00C075D0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AE145A8D22DF55A100027458 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		AE37F6F22199A708001787F6 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE37F6F52199A708001787F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE37F6FA2199A708001787F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		AE0E632222DB1F8900C075D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AE0E632322DB1F9800C075D0 /* Categories.swift */,
+				AE145A8D22DF55A100027458 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -489,8 +489,8 @@
 			files = (
 				AE0E631422DB1E6A00C075D0 /* Interactor.swift in Sources */,
 				AE0E632722DB200D00C075D0 /* Endpoint.swift in Sources */,
-				AE0E632422DB1F9800C075D0 /* Categories.swift in Sources */,
 				AE0E631122DB1E4C00C075D0 /* ViewController.swift in Sources */,
+				AE145A9022DF55A100027458 /* Data.swift in Sources */,
 				AE0E632022DB1EAA00C075D0 /* Worker.swift in Sources */,
 				AE37F6F62199A708001787F6 /* AppDelegate.swift in Sources */,
 				AE0E631A22DB1E8800C075D0 /* Models.swift in Sources */,
