@@ -18,6 +18,8 @@
 		AE0E632822DB200D00C075D0 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632622DB200D00C075D0 /* AlamofireClient.swift */; };
 		AE0E632A22DB247B00C075D0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E632922DB247B00C075D0 /* Router.swift */; };
 		AE145A9022DF55A100027458 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE145A8D22DF55A100027458 /* Data.swift */; };
+		AE3453D022DF6F78002DFA03 /* NamePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3453CE22DF6F77002DFA03 /* NamePictureCell.xib */; };
+		AE3453D122DF6F78002DFA03 /* NamePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3453CF22DF6F78002DFA03 /* NamePictureCell.swift */; };
 		AE37F6F62199A708001787F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F6F52199A708001787F6 /* AppDelegate.swift */; };
 		AE37F6FB2199A708001787F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6F92199A708001787F6 /* Main.storyboard */; };
 		AE37F6FD2199A709001787F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6FC2199A709001787F6 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		AE0E632622DB200D00C075D0 /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		AE0E632922DB247B00C075D0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AE145A8D22DF55A100027458 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AE3453CE22DF6F77002DFA03 /* NamePictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NamePictureCell.xib; sourceTree = "<group>"; };
+		AE3453CF22DF6F78002DFA03 /* NamePictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamePictureCell.swift; sourceTree = "<group>"; };
 		AE37F6F22199A708001787F6 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE37F6F52199A708001787F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE37F6FA2199A708001787F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0E631022DB1E4C00C075D0 /* ViewController.swift */,
+				AE3453C822DF6CD0002DFA03 /* SubView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +211,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		AE3453C822DF6CD0002DFA03 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				AE3453CF22DF6F78002DFA03 /* NamePictureCell.swift */,
+				AE3453CE22DF6F77002DFA03 /* NamePictureCell.xib */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		AE3453CB22DF6DB3002DFA03 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AE37F6E92199A708001787F6 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +254,7 @@
 			children = (
 				AE37F6F52199A708001787F6 /* AppDelegate.swift */,
 				AE0E630E22DB1E2700C075D0 /* Module */,
+				AE3453CB22DF6DB3002DFA03 /* Helpers */,
 				AE0E632122DB1F7700C075D0 /* Services */,
 				AE0E632222DB1F8900C075D0 /* Models */,
 				AE37F6F92199A708001787F6 /* Main.storyboard */,
@@ -370,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE37F7002199A709001787F6 /* LaunchScreen.storyboard in Resources */,
+				AE3453D022DF6F78002DFA03 /* NamePictureCell.xib in Resources */,
 				AE37F6FD2199A709001787F6 /* Assets.xcassets in Resources */,
 				AE37F6FB2199A708001787F6 /* Main.storyboard in Resources */,
 			);
@@ -493,6 +516,7 @@
 				AE145A9022DF55A100027458 /* Data.swift in Sources */,
 				AE0E632022DB1EAA00C075D0 /* Worker.swift in Sources */,
 				AE37F6F62199A708001787F6 /* AppDelegate.swift in Sources */,
+				AE3453D122DF6F78002DFA03 /* NamePictureCell.swift in Sources */,
 				AE0E631A22DB1E8800C075D0 /* Models.swift in Sources */,
 				AE0E632822DB200D00C075D0 /* AlamofireClient.swift in Sources */,
 				AE0E632A22DB247B00C075D0 /* Router.swift in Sources */,
