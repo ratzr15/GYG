@@ -62,35 +62,31 @@ enum List{
         }
         
         struct ViewModel {
-            class ListItem: NSObject, ListViewModelItem, MKAnnotation {
+            class ListItem: NSObject, ListViewModelItem {
                 var type: ListViewModelItemType {
                     return .list
                 }
                 
                 var sectionTitle: String {
-                    return "Vehicles around!"
+                    return "Reviews around Berlin!"
                 }
                 
                 var rowCount: Int {
                     return 1
                 }
                 
-                var coordinate: CLLocationCoordinate2D {
-                    return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                }
-                
-                var region:MKCoordinateRegion {
-                    return MKCoordinateRegion(center: coordinate, latitudinalMeters: latitude, longitudinalMeters: longitude)
-                }
-                
-                var latitude: Double
-                var longitude: Double
+                var rating: String?
                 var title: String?
+                var message: String?
+                var author: String?
+                var photo: String?
 
-                init(latitude: Double, longitude: Double, title: String? = nil) {
-                    self.latitude = latitude
-                    self.longitude = longitude
+                init(rating: String? = nil, message: String? = nil, title: String? = nil,author: String? = nil, photo: String? = nil) {
+                    self.rating = rating
+                    self.message = message
                     self.title = title
+                    self.author = author
+                    self.photo = photo
                 }
             }
             var datas: [ListItem]            
