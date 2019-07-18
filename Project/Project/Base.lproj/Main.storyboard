@@ -21,7 +21,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2cc-8J-eSa"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ThS-V8-ZDq"/>
                                 </connections>
                             </tableView>
