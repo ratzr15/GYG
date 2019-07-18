@@ -8,11 +8,12 @@
 
 import UIKit
 import Kingfisher
+import Cosmos
 
 class NamePictureCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -29,6 +30,7 @@ class NamePictureCell: UITableViewCell {
             let title =   item.title != "" ? "\("\"")\(item.title ?? "")\("\"")" : ""
             titleLabel?.text = title
             messageLabel?.text = item.message
+            ratingView.rating = NSString(string: item.rating ?? "").doubleValue
             avatarImgView.load(URL.init(string: item.photo ?? ""), placeholder: "placeholder", errorPlaceholder: "placeholder")
         }
     }

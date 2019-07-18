@@ -450,6 +450,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -457,6 +458,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
