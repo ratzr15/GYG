@@ -51,7 +51,7 @@ enum List{
         
         struct Request{
             var count:String
-            var page:String
+            var page:NSInteger
             var rating:String
             var sortBy:String
             var direction:String
@@ -62,7 +62,11 @@ enum List{
         }
         
         struct ViewModel {
-            class ListItem: NSObject, ListViewModelItem {
+            class ListItem: Equatable, ListViewModelItem {
+                static func == (lhs: List.Fetch.ViewModel.ListItem, rhs: List.Fetch.ViewModel.ListItem) -> Bool {
+                    return lhs.id == rhs.id
+                }
+                
                 var type: ListViewModelItemType {
                     return .list
                 }
@@ -80,13 +84,15 @@ enum List{
                 var message: String?
                 var author: String?
                 var photo: String?
+                var id: String?
 
-                init(rating: String? = nil, message: String? = nil, title: String? = nil,author: String? = nil, photo: String? = nil) {
+                init(rating: String? = nil, message: String? = nil, title: String? = nil,author: String? = nil, photo: String? = nil, id: String? = nil) {
                     self.rating = rating
                     self.message = message
                     self.title = title
                     self.author = author
                     self.photo = photo
+                    self.id = id
                 }
             }
             var datas: [ListItem]            
