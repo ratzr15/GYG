@@ -8,6 +8,7 @@ target 'Project' do
   # Pods for Project
     pod 'Alamofire'
     pod 'Kingfisher'
+    pod 'Cosmos'
 
   target 'ProjectTests' do
     inherit! :search_paths
