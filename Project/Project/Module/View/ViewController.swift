@@ -10,16 +10,19 @@
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 import UIKit
-import MapKit
 
 protocol DisplayLogic: class{
     func displayFetchedData(viewModel: List.Fetch.ViewModel)
 }
 
 class ViewController: UIViewController, DisplayLogic {
+  var interactor: FetchDataBusinessLogic?
+  var router: (NSObjectProtocol & RoutingLogic & DataPassing)?
+  var items: [ListViewModelItem] = []
+    
+  fileprivate var request = List.Fetch.Request.init(count: "10", page: 1, rating: "0..5", sortBy: "date_of_review", direction: "DESC")
 
-    var interactor: FetchDataBusinessLogic?
-    var router: (NSObjectProtocol & RoutingLogic & DataPassing)?
+  @IBOutlet weak var tableView: UITableView!
     
     /// Mode of View
     ///
@@ -29,15 +32,7 @@ class ViewController: UIViewController, DisplayLogic {
         case list,detail
     }
     
-    var mode:Mode = .list{
-        didSet {
-            setUp()
-        }
-    }
-    
-    var items: [ListViewModelItem] = []
-
-    @IBOutlet weak var tableView: UITableView!
+    var mode:Mode = .list
     
     // MARK: Object lifecycle
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
@@ -45,8 +40,7 @@ class ViewController: UIViewController, DisplayLogic {
     setUp()
   }
 
-  required init?(coder aDecoder: NSCoder)
-  {
+  required init?(coder aDecoder: NSCoder){
     super.init(coder: aDecoder)
     setUp()
   }
@@ -66,47 +60,51 @@ class ViewController: UIViewController, DisplayLogic {
         router.dataStore          = interactor    
   }
 
-  // MARK: View lifecycle
+ // MARK: View lifecycle
 
-    override func viewDidLoad(){
+  override func viewDidLoad(){
         super.viewDidLoad()
         clearNavigation()
         setUpTableView()
-        fetchData(request: List.Fetch.Request.init(count: "10", page: "1", rating: "0..5", sortBy: "date_of_review", direction: "DESC"))
-    }
+        fetchData(request: request)
+  }
     
-    private func setUpTableView(){
+  private func setUpTableView(){
         tableView?.register(NamePictureCell.nib, forCellReuseIdentifier: NamePictureCell.identifier)
-    }
+        tableView?.dataSource = self
+  }
 
-    private func clearNavigation(){
+  private func clearNavigation(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
+  }
     
     // MARK: Setup Functions
 
-    func fetchData(request:List.Fetch.Request? = nil){
+  func fetchData(request:List.Fetch.Request? = nil){
         if let req = request {
             interactor?.fetchData(request: req)
         }
-    }
+  }
 
-    func displayFetchedData(viewModel: List.Fetch.ViewModel){
+  func displayFetchedData(viewModel: List.Fetch.ViewModel){
         let vm =  viewModel.datas
-        items = vm
-        tableView.reloadData()
+        for v in vm {
+            items.append(v)
+        }
         if items.count == 0 {
             let noResult = NoResultsItem(name:"No Results found, please try again.")
             items.append(noResult)
         }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
-
 
 //MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
@@ -138,9 +136,21 @@ extension ViewController: UITableViewDataSource {
         }
     }
     
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return items[section].type == .list ? "" : items[section].sectionTitle
-        
     }
 }
 
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = items.count - 1
+        if indexPath.row == lastElement && items.count > 0 {
+            self.request.page = self.request.page + 1
+            fetchData(request: self.request)
+        }
+
+    }
+
+}
