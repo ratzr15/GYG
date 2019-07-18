@@ -77,7 +77,7 @@ protocol ClientProtocol {
      - token: default: nil
      - baseURL: default:fake API for mytaxi
      */
-    @objc class func setup(token:String, baseURL: String = "https://fake-poi-api.mytaxi.com/"){
+    @objc class func setup(token:String, baseURL: String = ""){
         AlamofireClient.config.authToken = token
         AlamofireClient.config.baseURLString = baseURL
     }
@@ -167,7 +167,7 @@ extension JSONDecoder {
         
         guard let responseData = response.data else {
             print("didn't get any data from API")
-            return .failure(XErrorType.CannotCreate("Prsing failed"))
+            return .failure(XErrorType.CannotCreate("Parsing failed"))
         }
         do {
             let item = try decode(T.self, from: responseData)
@@ -184,9 +184,12 @@ extension JSONDecoder {
 enum API {}
 
 extension API {
-    //https://fake-poi-api.mytaxi.com/?p2Lat=53.394655&p1Lon=-65.757589&p1Lat=59.694865&p2Lon=10.099891
-    static func fetch(request:List.Fetch.Request ) -> Endpoint<Categories> {
-        return Endpoint(path: "p2Lat=\(request.p2Lat)&p1Lon=\(request.p1Lon)&p1Lat=\(request.p1Lat)&p2Lon=\(request.p2Lon)")
+    /// www.getyourguide.com API Req
+    ///
+    /// - Parameter request: required (count, page)
+    /// - Returns: Data
+    static func fetch(request:List.Fetch.Request ) -> Endpoint<Review> {
+        return Endpoint(path: "count=\(request.count)&page=\(request.page)&rating=\(request.rating)&sortBy=\(request.sortBy)&direction=\(request.direction)")
     }
     
 }

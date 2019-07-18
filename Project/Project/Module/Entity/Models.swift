@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------------------------------------------------------
-//  File Name        :   CategoriesModels
+//  File Name        :   Models
 //  Description      :   VM's resolved as Equatables
 //                       2. Architecture    - TDD + Clean Swift (http://clean-swift.com)
 //  Author            :  Rathish Kannan
@@ -48,48 +48,51 @@ struct NoResultsItem: ListViewModelItem {
 enum List{
     // MARK: Use cases    
     enum Fetch{
-                
+        
         struct Request{
-            var p2Lat:String
-            var p1Lon:String
-            var p1Lat:String
-            var p2Lon:String
+            var count:String
+            var page:NSInteger
+            var rating:String
+            var sortBy:String
+            var direction:String
         }
         
         struct Response{
-            var datas: [Categories]
+            var datas: [Datum]
         }
         
         struct ViewModel {
-            class ListItem: NSObject, ListViewModelItem, MKAnnotation {
+            class ListItem: Equatable, ListViewModelItem {
+                static func == (lhs: List.Fetch.ViewModel.ListItem, rhs: List.Fetch.ViewModel.ListItem) -> Bool {
+                    return lhs.id == rhs.id
+                }
+                
                 var type: ListViewModelItemType {
                     return .list
                 }
                 
                 var sectionTitle: String {
-                    return "Vehicles around!"
+                    return "Reviews around Berlin!"
                 }
                 
                 var rowCount: Int {
                     return 1
                 }
                 
-                var coordinate: CLLocationCoordinate2D {
-                    return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                }
-                
-                var region:MKCoordinateRegion {
-                    return MKCoordinateRegion(center: coordinate, latitudinalMeters: latitude, longitudinalMeters: longitude)
-                }
-                
-                var latitude: Double
-                var longitude: Double
+                var rating: String?
                 var title: String?
+                var message: String?
+                var author: String?
+                var photo: String?
+                var id: String?
 
-                init(latitude: Double, longitude: Double, title: String? = nil) {
-                    self.latitude = latitude
-                    self.longitude = longitude
+                init(rating: String? = nil, message: String? = nil, title: String? = nil,author: String? = nil, photo: String? = nil, id: String? = nil) {
+                    self.rating = rating
+                    self.message = message
                     self.title = title
+                    self.author = author
+                    self.photo = photo
+                    self.id = id
                 }
             }
             var datas: [ListItem]            
