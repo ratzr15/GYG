@@ -29,7 +29,7 @@
 
 ## Usage 
 
-* __User can launch the app and find list of reviews around Berlin
+* __User can launch the app and find list of reviews around Berlin__
 * __User can sort the reviews as per date/ rating__
 * __Refer the attached screens folder__
 
