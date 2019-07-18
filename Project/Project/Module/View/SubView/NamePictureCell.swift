@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 
-
 class NamePictureCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -31,7 +30,6 @@ class NamePictureCell: UITableViewCell {
             titleLabel?.text = title
             messageLabel?.text = item.message
             avatarImgView.load(URL.init(string: item.photo ?? ""), placeholder: "placeholder", errorPlaceholder: "placeholder")
-            
         }
     }
     
@@ -51,5 +49,7 @@ class NamePictureCell: UITableViewCell {
         super.prepareForReuse()
         titleLabel.text = ""
         messageLabel.text = ""
+        avatarImgView.image = nil
+        prefixLabel.text = ""
     }    
 }
