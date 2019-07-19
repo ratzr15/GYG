@@ -1,6 +1,6 @@
 # GYG 🚘
 
-# An example project to show user reviews
+# Test project to show user reviews
 
 ## Misssion 
 
@@ -17,9 +17,9 @@
 
 ## Thirdparty Libs
 
-- **[Alamofire](https://github.com/Alamofire/Alamofire)**  
-- **[OCMock](http://ocmock.org)**     
-- **[Spectra](https://github.com/specta/expecta)**     
+- **[Alamofire](https://github.com/Alamofire/Alamofire)**  - Networking library
+- **[Cosmos](https://github.com/evgenyneu/Cosmosg)**   - Show ratings for each review  
+
 
 ## VIP
 
@@ -36,7 +36,7 @@
 
 ## Notes 
 
-* __RxSwift is not used considering the less complexity of the requirement__
+* __RxSwift is not used since we are using CleanSwift already__(https://clean-swift.com/add-reactive-ness-clean-swift/)
 
 ## Author
 
