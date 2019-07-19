@@ -1,4 +1,4 @@
-# GYG 🚘
+# GYG 🌏
 
 # Test project to show user reviews
 
