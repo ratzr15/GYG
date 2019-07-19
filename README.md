@@ -2,7 +2,7 @@
 
 # Test project to show user reviews
 
-## Misssion 
+## Misssion (Completed)
 
 * __Handle the acceptance criteria__
 * __Well maintaineable with clean architecture__
