@@ -25,8 +25,11 @@
 		AE37F6FB2199A708001787F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6F92199A708001787F6 /* Main.storyboard */; };
 		AE37F6FD2199A709001787F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6FC2199A709001787F6 /* Assets.xcassets */; };
 		AE37F7002199A709001787F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37F6FE2199A709001787F6 /* LaunchScreen.storyboard */; };
-		AE37F70B2199A709001787F6 /* NewsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F70A2199A709001787F6 /* NewsListTests.swift */; };
-		AE37F7162199A709001787F6 /* NewsListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F7152199A709001787F6 /* NewsListUITests.swift */; };
+		AE37F7162199A709001787F6 /* ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37F7152199A709001787F6 /* ProjectUITests.swift */; };
+		AE443A1F22E191B300CB1CDB /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE443A1C22E191B300CB1CDB /* PresenterTests.swift */; };
+		AE443A2022E191B300CB1CDB /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE443A1D22E191B300CB1CDB /* InteractorTests.swift */; };
+		AE443A2122E191B300CB1CDB /* WorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE443A1E22E191B300CB1CDB /* WorkerTests.swift */; };
+		AE443A2322E19D6100CB1CDB /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE443A2222E19D6100CB1CDB /* ViewControllerTests.swift */; };
 		B4C7E53BBF3EA035F58E68E0 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D00D56D62E5D063A457C9E /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,11 +77,14 @@
 		AE37F6FF2199A709001787F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE37F7012199A709001787F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE37F7062199A709001787F6 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE37F70A2199A709001787F6 /* NewsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTests.swift; sourceTree = "<group>"; };
 		AE37F70C2199A709001787F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE37F7112199A709001787F6 /* ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE37F7152199A709001787F6 /* NewsListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListUITests.swift; sourceTree = "<group>"; };
+		AE37F7152199A709001787F6 /* ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUITests.swift; sourceTree = "<group>"; };
 		AE37F7172199A709001787F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE443A1C22E191B300CB1CDB /* PresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
+		AE443A1D22E191B300CB1CDB /* InteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		AE443A1E22E191B300CB1CDB /* WorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerTests.swift; sourceTree = "<group>"; };
+		AE443A2222E19D6100CB1CDB /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		BFC2A3F0E00C6A79F98445D4 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		D93C2A6FDCF290EF98BD7250 /* Pods-ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTests/Pods-ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,7 +277,10 @@
 		AE37F7092199A709001787F6 /* ProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE37F70A2199A709001787F6 /* NewsListTests.swift */,
+				AE443A1D22E191B300CB1CDB /* InteractorTests.swift */,
+				AE443A1C22E191B300CB1CDB /* PresenterTests.swift */,
+				AE443A1E22E191B300CB1CDB /* WorkerTests.swift */,
+				AE443A2222E19D6100CB1CDB /* ViewControllerTests.swift */,
 				AE37F70C2199A709001787F6 /* Info.plist */,
 			);
 			path = ProjectTests;
@@ -280,7 +289,7 @@
 		AE37F7142199A709001787F6 /* ProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AE37F7152199A709001787F6 /* NewsListUITests.swift */,
+				AE37F7152199A709001787F6 /* ProjectUITests.swift */,
 				AE37F7172199A709001787F6 /* Info.plist */,
 			);
 			path = ProjectUITests;
@@ -536,7 +545,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE37F70B2199A709001787F6 /* NewsListTests.swift in Sources */,
+				AE443A2022E191B300CB1CDB /* InteractorTests.swift in Sources */,
+				AE443A2122E191B300CB1CDB /* WorkerTests.swift in Sources */,
+				AE443A1F22E191B300CB1CDB /* PresenterTests.swift in Sources */,
+				AE443A2322E19D6100CB1CDB /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE37F7162199A709001787F6 /* NewsListUITests.swift in Sources */,
+				AE37F7162199A709001787F6 /* ProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +754,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NewsListTests/Info.plist;
+				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -763,7 +775,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NewsListTests/Info.plist;
+				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,17 +795,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NewsListUITests/Info.plist;
+				INFOPLIST_FILE = ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ratzr15.NewsListUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = ratzr15.ProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NewsList;
+				TEST_TARGET_NAME = Project;
 			};
 			name = Debug;
 		};
@@ -803,17 +816,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NewsListUITests/Info.plist;
+				INFOPLIST_FILE = ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ratzr15.NewsListUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = ratzr15.ProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NewsList;
+				TEST_TARGET_NAME = Project;
 			};
 			name = Release;
 		};

@@ -62,13 +62,14 @@ class ViewController: UIViewController, DisplayLogic {
 
  // MARK: View lifecycle
 
-  override func viewDidLoad(){
-        super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        fetchData(request: request)
+        setUpTableView()
         clearNavigation()
         setSortButtons()
-        setUpTableView()
-        fetchData(request: request)
-  }
+    }
+
     
   private func setUpTableView(){
         tableView?.register(NamePictureCell.nib, forCellReuseIdentifier: NamePictureCell.identifier)
@@ -91,14 +92,12 @@ class ViewController: UIViewController, DisplayLogic {
   @objc func sort() {
     self.request.sortBy = "date_of_review"
     self.request.direction =  self.request.direction == "asc" ? "desc" : "asc"
-    self.request.count = String(items.count)
     fetchData(request: self.request)
   }
 
   @objc func rating() {
     self.request.sortBy = "rating"
     self.request.direction =  self.request.direction == "asc" ? "desc" : "asc"
-    self.request.count = String(items.count)
     fetchData(request: self.request)
   }
 
@@ -129,9 +128,8 @@ class ViewController: UIViewController, DisplayLogic {
             let noResult = NoResultsItem(name:"No Results found, please try again.")
             items.append(noResult)
         }
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+    
+        self.tableView.reloadData()
     }
 }
 
