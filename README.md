@@ -6,7 +6,7 @@
 
 * __Handle the acceptance criteria__
 * __Well maintaineable with clean architecture__
-* __Unit test cases__
+* __Unit test cases (Coverage 75%)__
 
 
 ## Architecture Details
