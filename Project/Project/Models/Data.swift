@@ -17,7 +17,11 @@ struct Review: Codable {
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct Datum: Codable, Equatable {
+    static func == (lhs: Datum, rhs: Datum) -> Bool {
+         return lhs.reviewID == rhs.reviewID
+    }
+    
     let reviewID: Int
     let rating: String
     let title: String?
